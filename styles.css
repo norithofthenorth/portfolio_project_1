@@ -1,4 +1,17 @@
-.placeholder {
-    background-color: red;
+.nav-wrapper {
+    display: flex; /*flexbox will ignore everything inside the child elements of divs, so to flexbox, this is only showing two columns (the right-side class and lef-side class)*/
+    justify-content: space-between; /*this will justify (left and right in this case for both columns) and space the content in the div using all the space in between the two divs*/
+    padding: 38px;
 }
 
+.left-side {
+    display: flex; /*this will de-stack the links in the nav and display them next to each other*/
+
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em; /*em is a percent of what the font size would normally be for browswer defaults*/
+    text-transform: uppercase; /*this will make all the font as uppercase. Useful in the case of links especially*/
+    
+}
