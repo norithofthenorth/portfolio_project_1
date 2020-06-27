@@ -1,6 +1,17 @@
+/*MASTER STYLES*/
+
 body {
     margin: 0px; /*this will override browser default of 8pt margin*/
 }
+
+
+.container {
+    display: grid; /*using the CSS Grid for the overall layout, and flexbox for aligning individual elements*/
+    grid-template-columns: 1fr; /*Creating template columns of one fractional unit, which means entire layout will have columns that take up 100 percent. So now each child element of container will fill up a column across the page - basically full-bleed*/
+}
+
+
+/*NAV STYLES*/
 
 .nav-wrapper {
     display: flex; /*flexbox will ignore everything inside the child elements of divs, so to flexbox, this is only showing two columns (the right-side class and lef-side class)*/
@@ -23,14 +34,14 @@ body {
 
 .nav-link-wrapper {
     height: 22px;
-    border-bottom: 1px solid transparent; /* */
+    border-bottom: 1px solid transparent; /*instead of using an underline, can simulate the udnerline effect by fading in a thin border bottom (border as in box-model content border)*/
     transition: border-bottom 0.5s; /* */
 }
 
 .nav-link-wrapper a {
     color: #8a8a8a;
     text-decoration: none;
-    transition: color .5s; /*this will animate or fade-in the underline on the links*/
+    transition: color .5s; /*this will animate or fade-in the underline on any element that is a n <a> links*/
 }
 
 .nav-link-wrapper:hover { /*checks for the psuedo state of hover when the mouse is hovering over any element in the nav wrapper*/
@@ -40,4 +51,6 @@ body {
 .nav-link-wrapper a:hover { /*two different hover states - one for the link, and one for the elements in the div, to get the fade in and out effect*/
     color: black;
 }
+
+/*PORTFOLIO STYLES*/
 
