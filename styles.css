@@ -1,7 +1,12 @@
+body {
+    margin: 0px; /*this will override browser default of 8pt margin*/
+}
+
 .nav-wrapper {
     display: flex; /*flexbox will ignore everything inside the child elements of divs, so to flexbox, this is only showing two columns (the right-side class and lef-side class)*/
     justify-content: space-between; /*this will justify (left and right in this case for both columns) and space the content in the div using all the space in between the two divs*/
     padding: 38px;
+
 }
 
 .left-side {
@@ -10,8 +15,29 @@
 }
 
 .nav-wrapper > .left-side > div {
-    margin-right: 20px;
+    margin-right: 20px; /*give us some space between nav links*/
     font-size: 0.9em; /*em is a percent of what the font size would normally be for browswer defaults*/
     text-transform: uppercase; /*this will make all the font as uppercase. Useful in the case of links especially*/
-    
+
 }
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent; /* */
+    transition: border-bottom 0.5s; /* */
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color .5s; /*this will animate or fade-in the underline on the links*/
+}
+
+.nav-link-wrapper:hover { /*checks for the psuedo state of hover when the mouse is hovering over any element in the nav wrapper*/
+    border-bottom: 1px solid black
+}
+
+.nav-link-wrapper a:hover { /*two different hover states - one for the link, and one for the elements in the div, to get the fade in and out effect*/
+    color: black;
+}
+
