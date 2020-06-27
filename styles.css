@@ -54,3 +54,38 @@ body {
 
 /*PORTFOLIO STYLES*/
 
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr /*because I don't want each project to take up a whole row in the grid, I'm designated three columns, so each project gets their own full sized column.*/
+}
+
+.portfolio-item-wrapper {
+    position: relative; /*this will allow me to position each element (and their contents) inside the item wrapper.  This is required for using positive: absolute later in the img=text-wrapper*/
+
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*because i don't have images that are the same size, this will crop images so they all sit nicely next to each other*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute; /*have to force an element someplace where it usually doesn't go, in order to do this we have to have a parent element in a relative position.*/
+    top: 0; /*positions at the very top*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centers items in the wrapper left to right*/
+    align-items: center; /*centers items in the wrapper top to bottom*/
+    height: 100%; /*take up the full parent element height*/
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
