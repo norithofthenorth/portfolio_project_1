@@ -210,10 +210,17 @@ Process Outline
 </body>
 <script>
   const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+  
   portfolioItems.forEach(portfolioItem => {
       portfolioItem.addEventListener('mouseover', () => {
           console.log(portfolioItem.childNodes[3].classList); /*First, I called portfolioItem.childNodes and conosleLog'd it to make sure I was referencing the correct # in the array for the portfolio-img-background div. Once i confirmed, then I revised this line to what it is currently*/
           portfolioItem.childNodes[3].classList.add('img-darken');
+      })
+  })
+
+  portfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseout', () => {
+          portfolioItem.childNodes[3].classList.remove('img-darken');
       })
   })
 </script>
