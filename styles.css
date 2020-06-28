@@ -89,3 +89,19 @@ body {
     width: 50%;
     margin-bottom: 20px;
 }
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent; /*this will make the subtitle invisible by default, but with the class below on hover, the text will fade in over 1s as bold seafoamgreen*/
+}
+
+.img-text-wrapper:hover .subtitle { /*this will change the subtitle weight and font when the mouse hovers over it*/
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
