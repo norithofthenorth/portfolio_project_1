@@ -2,6 +2,7 @@
 
 body {
     margin: 0px; /*this will override browser default of 8pt margin*/
+    font-family: 'MuseoModerno', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -51,6 +52,15 @@ body {
 .nav-link-wrapper a:hover { /*two different hover states - one for the link, and one for the elements in the div, to get the fade in and out effect*/
     color: black;
 }
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
 
 /*PORTFOLIO STYLES*/
 
@@ -105,3 +115,23 @@ body {
     transition: 1s;
     filter: brightness(10%);
 }
+
+/*About Page Styles*/
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;}
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
